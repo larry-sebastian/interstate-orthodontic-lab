@@ -453,6 +453,126 @@
       line-height: 1.5;
     }
 
+    /* ===== PRICING ===== */
+    .pricing { background: var(--cream); }
+    .pricing-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .pricing-note {
+      font-size: 13px;
+      color: var(--gray-500);
+      background: var(--teal-light);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .pricing-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--gray-100);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .pricing-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+    .pricing-card-header {
+      background: var(--teal);
+      color: white;
+      padding: 16px 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .pricing-card-header.alt { background: var(--teal-dark); }
+    .pricing-card-header.dark { background: var(--dark); }
+    .pricing-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 14px;
+    }
+    .pricing-row:last-child { border-bottom: none; }
+    .pricing-row span:first-child { color: var(--gray-700); }
+    .pricing-row span:last-child {
+      font-weight: 700;
+      color: var(--teal-dark);
+      font-size: 15px;
+    }
+    .pricing-row.sub {
+      font-size: 12px;
+      padding: 0 24px 10px;
+      color: var(--gray-500);
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .pricing-extras {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .pricing-extra-card {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .pricing-extra-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--teal-dark);
+      margin-bottom: 10px;
+    }
+    .pricing-extra-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .pricing-extra-row:last-child { border-bottom: none; }
+    .pricing-extra-row span:last-child {
+      font-weight: 700;
+      color: var(--teal-dark);
+    }
+    .pricing-shipping {
+      margin-top: 28px;
+      background: var(--teal-light);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .pricing-shipping-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--teal-dark);
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-extras { grid-template-columns: 1fr; }
+    }
+
     /* ===== COMPONENTS ===== */
     .components {
       background: var(--teal);
@@ -865,6 +985,7 @@
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
         <a href="#services">Products</a>
+        <a href="#pricing">Pricing</a>
         <a href="#process">How It Works</a>
         <a href="#testimonials">Reviews</a>
         <a href="#contact">Contact</a>
@@ -1081,6 +1202,130 @@
             <p style="font-size: 14px; color: var(--gray-700); line-height: 1.7;">Have a unique design or modification in mind? I welcome custom requests and will work with you to bring your clinical vision to life. Every case gets my personal attention.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-header">
+        <div>
+          <div class="section-label">Transparent Pricing</div>
+          <h2 class="section-title">Price List</h2>
+          <p class="section-subtitle">No hidden fees, no surprises. Fair pricing on every appliance.</p>
+        </div>
+        <div class="pricing-note">📦 Shipping to IOL is always free</div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- REMOVABLE -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-card-header">Removable Appliances</div>
+          <div class="pricing-row">
+            <span>Hawley <small style="color:var(--gray-500)">(cuspid to cuspid)</small></span>
+            <span>$55</span>
+          </div>
+          <div class="pricing-row">
+            <span>Hawley <small style="color:var(--gray-500)">(molar to molar)</small></span>
+            <span>$75</span>
+          </div>
+          <div class="pricing-row">
+            <span>Spring Aligner</span>
+            <span>$125</span>
+          </div>
+          <div class="pricing-row">
+            <span>T.M.J. Splint</span>
+            <span>$125</span>
+          </div>
+        </div>
+
+        <!-- FIXED -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-card-header alt">Fixed Appliances</div>
+          <div class="pricing-row">
+            <span>Space Maintainer</span>
+            <span>$47</span>
+          </div>
+          <div class="pricing-row">
+            <span>Lingual Arch</span>
+            <span>$55</span>
+          </div>
+          <div class="pricing-row">
+            <span>Fixed Habit</span>
+            <span>$55</span>
+          </div>
+          <div class="pricing-row">
+            <span>Nance</span>
+            <span>$55</span>
+          </div>
+          <div class="pricing-row">
+            <span>E-Arch ("Arnold")</span>
+            <span>$75</span>
+          </div>
+          <div class="pricing-row">
+            <span>Quad Helix</span>
+            <span>$80</span>
+          </div>
+          <div class="pricing-row">
+            <span>R.P.E.</span>
+            <span>$90</span>
+          </div>
+        </div>
+
+        <!-- DIGITAL & SHIPPING -->
+        <div class="pricing-card fade-in">
+          <div class="pricing-card-header dark">Digital &amp; Shipping</div>
+          <div class="pricing-row">
+            <span>3D Printed Model <small style="color:var(--gray-500)">(per arch)</small></span>
+            <span>$21</span>
+          </div>
+          <div class="pricing-row">
+            <span>USPS Flat-Rate Shipping</span>
+            <span>$14</span>
+          </div>
+          <div class="pricing-row">
+            <span>Shipping to IOL</span>
+            <span style="color: var(--teal);">FREE</span>
+          </div>
+          <div style="padding: 16px 24px; background: var(--teal-light); font-size: 13px; color: var(--teal-dark); line-height: 1.6;">
+            <strong>💡 Custom or specialty work?</strong><br>
+            Call Doug at <a href="tel:+17278597171" style="color: var(--teal); font-weight: 700;">727-859-7171</a> for a personalized quote on any appliance not listed here.
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPONENTS PRICING -->
+      <div class="pricing-extras">
+        <div class="pricing-extra-card">
+          <h4>Components &amp; Add-Ons</h4>
+          <div class="pricing-extra-row"><span>Color or Sparkle</span><span>$3</span></div>
+          <div class="pricing-extra-row"><span>Extra Ball Clasp or Rest</span><span>$6</span></div>
+          <div class="pricing-extra-row"><span>Finger Spring</span><span>$6</span></div>
+          <div class="pricing-extra-row"><span>Molar Band</span><span>$9</span></div>
+          <div class="pricing-extra-row"><span>Bite Plate</span><span>$10</span></div>
+        </div>
+        <div class="pricing-extra-card">
+          <h4>More Components</h4>
+          <div class="pricing-extra-row"><span>Extra Molar Clasp</span><span>$10</span></div>
+          <div class="pricing-extra-row"><span>Rake</span><span>$12</span></div>
+          <div class="pricing-extra-row"><span>Acrylic Arch</span><span>$12</span></div>
+          <div class="pricing-extra-row"><span>Expansion Screw</span><span>$15</span></div>
+          <div class="pricing-extra-row"><span>Flat Labial Bow</span><span>$15</span></div>
+        </div>
+      </div>
+
+      <!-- SHIPPING INFO -->
+      <div class="pricing-shipping">
+        <div class="pricing-shipping-item">📦 Shipping to IOL: <strong>FREE</strong></div>
+        <div class="pricing-shipping-item">🚚 USPS Flat-Rate to You: <strong>$14</strong></div>
+        <div class="pricing-shipping-item">⚡ Rush cases: <a href="tel:+17278597171" style="color:var(--teal-dark);">Call for availability</a></div>
+      </div>
+
+      <!-- DOWNLOAD BUTTONS -->
+      <div style="display: flex; gap: 14px; margin-top: 24px; justify-content: center; flex-wrap: wrap;">
+        <a href="/Interstate-Orthodontic-Lab-Price-List.pdf" class="btn btn-primary" download>📄 Download Price List (PDF)</a>
+        <a href="/Interstate-Orthodontic-Lab-RX-Form.pdf" class="btn btn-outline" download>📋 Download RX Form (PDF)</a>
       </div>
     </div>
   </section>
