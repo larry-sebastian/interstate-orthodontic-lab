@@ -180,10 +180,23 @@
       background-size: 20px 20px;
     }
     .hero-inner {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+      text-align: left;
+    }
+    .hero-mascot {
+      max-width: 340px;
+      filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.2));
+    }
+    .hero-mascot img {
+      width: 100%;
+      height: auto;
     }
     .hero-badge {
       display: inline-block;
@@ -222,7 +235,6 @@
     .hero-buttons {
       display: flex;
       gap: 14px;
-      justify-content: center;
       flex-wrap: wrap;
       margin-bottom: 40px;
     }
@@ -253,7 +265,6 @@
     .btn-white { background: white; color: var(--navy); }
     .hero-stats {
       display: flex;
-      justify-content: center;
       gap: 24px;
       flex-wrap: wrap;
     }
@@ -783,6 +794,10 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-mascot { max-width: 260px; margin: 0 auto; }
+      .hero-buttons { justify-content: center; }
+      .hero-stats { justify-content: center; }
       .about-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
       .why-grid, .test-grid { grid-template-columns: 1fr; }
       .services-grid { grid-template-columns: 1fr; }
@@ -843,18 +858,23 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-badge">🦷 HANDCRAFTED IN FLORIDA SINCE 1989</div>
-      <h1>Orthodontic Appliances Built with <em>Super Precision!</em></h1>
-      <p class="hero-sub">One technician. One lab. Every appliance personally handcrafted by Douglas Saylor — no assembly lines, no hand-offs, no surprises!</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn-comic btn-red">Get a Quote! →</a>
-        <a href="#pricing" class="btn-comic btn-yellow">See Prices 💰</a>
-        <a href="/Interstate-Orthodontic-Lab-Brochure.pdf" class="btn-comic btn-white" download>📄 Brochure</a>
+      <div>
+        <div class="hero-badge">🦷 HANDCRAFTED IN FLORIDA SINCE 1989</div>
+        <h1>Orthodontic Appliances Built with <em>Super Precision!</em></h1>
+        <p class="hero-sub">One technician. One lab. Every appliance personally handcrafted by Douglas Saylor — no assembly lines, no hand-offs, no surprises!</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-comic btn-red">Get a Quote! →</a>
+          <a href="#pricing" class="btn-comic btn-yellow">See Prices 💰</a>
+          <a href="/Interstate-Orthodontic-Lab-Brochure.pdf" class="btn-comic btn-white" download>📄 Brochure</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><h3>35+</h3><p>Years Exp.</p></div>
+          <div class="hero-stat"><h3>48hr</h3><p>Rush Service</p></div>
+          <div class="hero-stat"><h3>100%</h3><p>Handcrafted</p></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><h3>35+</h3><p>Years Exp.</p></div>
-        <div class="hero-stat"><h3>48hr</h3><p>Rush Service</p></div>
-        <div class="hero-stat"><h3>100%</h3><p>Handcrafted</p></div>
+      <div class="hero-mascot">
+        <img src="/iol-mascots.png" alt="IOL Orthodontics tooth superhero mascots with Interstate shield logo">
       </div>
     </div>
   </section>
