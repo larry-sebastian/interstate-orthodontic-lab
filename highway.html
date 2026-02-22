@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interstate Orthodontic Lab — Highway Edition | Kenneth City, FL</title>
+  <meta name="description" content="Custom orthodontic appliances handcrafted by Douglas Saylor since 1989. Precision fabrication, 48-hour rush, serving practices nationwide from Kenneth City, FL. Call 727-859-7171.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://interstate-ortho-site.vercel.app/highway.html">
+  <meta property="og:title" content="Interstate Orthodontic Lab | Highway Edition">
+  <meta property="og:description" content="Custom orthodontic appliances since 1989. 48-hour rush. Call 727-859-7171.">
+  <meta property="og:image" content="https://interstate-ortho-site.vercel.app/images/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Overpass', 'Highway Gothic', 'Interstate', -apple-system, sans-serif;
+      color: #f0f0f0;
+      background: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    :root {
+      --sign-green: #006b3f;
+      --sign-green-dark: #004d2d;
+      --sign-green-deeper: #003820;
+      --sign-blue: #003da5;
+      --sign-blue-dark: #002d7a;
+      --sign-brown: #6c3b15;
+      --sign-yellow: #ffcc00;
+      --sign-white: #ffffff;
+      --sign-red: #cc0000;
+      --road-dark: #1a1a1a;
+      --road-gray: #333333;
+      --road-line: #ffcc00;
+      --asphalt: #2a2a2a;
+      --concrete: #e8e8e0;
+      --cream: #f5f3ec;
+      --text-light: #e0ddd5;
+      --text-muted: #9a9788;
+      --radius: 10px;
+    }
+
+    /* ===== SIGN PANELS ===== */
+    .sign-panel {
+      background: var(--sign-green);
+      border: 3px solid var(--sign-white);
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.5), inset 0 0 0 2px rgba(255,255,255,0.1);
+      position: relative;
+    }
+    .sign-panel-blue {
+      background: var(--sign-blue);
+    }
+    .sign-panel-brown {
+      background: var(--sign-brown);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--asphalt);
+      border-bottom: 4px solid var(--road-line);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .interstate-shield {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .shield-svg { width: 48px; height: 48px; }
+    .logo-text-area {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+    .logo-sub {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--road-line);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.75);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--road-line); }
+    .nav-cta {
+      background: var(--sign-green);
+      color: white !important;
+      padding: 8px 18px;
+      border-radius: 6px;
+      border: 2px solid white;
+      font-weight: 800;
+    }
+    .nav-cta:hover { background: var(--sign-green-dark); }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .mobile-toggle span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: white;
+      margin: 5px 0;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: var(--road-dark);
+      padding: 80px 24px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: repeating-linear-gradient(to bottom, var(--road-line) 0, var(--road-line) 40px, transparent 40px, transparent 70px);
+      opacity: 0.15;
+    }
+    .hero-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-sign {
+      padding: 40px;
+    }
+    .hero-sign h1 {
+      font-size: clamp(32px, 4.5vw, 50px);
+      font-weight: 900;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero-sign h1 .accent { color: var(--road-line); }
+    .hero-sign p {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-hw {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-family: 'Overpass', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid white;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-hw:hover { transform: translateY(-1px); }
+    .btn-green { background: var(--sign-green); color: white; }
+    .btn-green:hover { background: var(--sign-green-dark); }
+    .btn-yellow { background: var(--road-line); color: var(--road-dark); border-color: var(--road-dark); }
+    .btn-yellow:hover { background: #e6b800; }
+    .btn-outline { background: transparent; color: white; }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .mile-marker {
+      background: var(--sign-green);
+      border: 2px solid white;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+    .mile-marker h3 {
+      font-size: 42px;
+      font-weight: 900;
+      color: white;
+      line-height: 1;
+    }
+    .mile-marker p {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+    }
+    .mile-markers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    /* ===== SECTION STYLING ===== */
+    .section { padding: 72px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-header {
+      margin-bottom: 40px;
+    }
+    .exit-sign {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sign-green);
+      color: white;
+      border: 2px solid white;
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.6;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      background: var(--cream);
+      color: var(--road-dark);
+    }
+    .about .section-title { color: var(--sign-green-deeper); }
+    .about .section-sub { color: #666; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-top: 32px;
+    }
+    .about-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--sign-green);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .about-text h3 {
+      font-size: 26px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--sign-green-deeper);
+      margin-bottom: 4px;
+    }
+    .about-role {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--sign-green);
+      margin-bottom: 16px;
+    }
+    .about-text p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    /* ===== WHY US ===== */
+    .why { background: var(--asphalt); }
+    .why .section-title { color: white; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+    .why-card {
+      padding: 28px;
+      transition: transform 0.2s;
+    }
+    .why-card:hover { transform: translateY(-3px); }
+    .why-card h3 {
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+      margin: 12px 0 6px;
+    }
+    .why-card p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+    }
+    .why-icon { font-size: 28px; }
+
+    /* ===== PRICING ===== */
+    .pricing {
+      background: var(--cream);
+      color: var(--road-dark);
+    }
+    .pricing .section-title { color: var(--sign-green-deeper); }
+    .pricing .section-sub { color: #666; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 36px;
+    }
+    .price-card {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid var(--road-dark);
+    }
+    .price-card-header {
+      background: var(--sign-green);
+      border: 2px solid white;
+      border-bottom: none;
+      border-radius: 8px 8px 0 0;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .price-card-header.blue { background: var(--sign-blue); }
+    .price-card-header.brown { background: var(--sign-brown); }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+      background: white;
+    }
+    .price-row:last-child { border-bottom: none; }
+    .price-row span:first-child { color: #555; }
+    .price-row span:last-child { font-weight: 800; color: var(--sign-green-deeper); }
+    .price-row.free span:last-child { color: var(--sign-green); }
+
+    .comp-strip {
+      margin-top: 24px;
+      padding: 20px 24px;
+    }
+    .comp-strip h3 {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .comp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .comp-tag {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.85);
+    }
+    .comp-tag span:last-child { font-weight: 800; color: var(--road-line); }
+
+    /* ===== PROCESS ===== */
+    .process { background: var(--road-dark); }
+    .process .section-title { color: white; }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+    .step {
+      text-align: center;
+      padding: 28px 16px;
+    }
+    .step-num {
+      width: 52px;
+      height: 52px;
+      background: var(--road-line);
+      color: var(--road-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      margin: 0 auto 12px;
+      border: 2px solid var(--road-dark);
+    }
+    .step h3 {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+      margin-bottom: 6px;
+    }
+    .step p { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials { background: var(--cream); color: var(--road-dark); }
+    .testimonials .section-title { color: var(--sign-green-deeper); }
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .test-card {
+      background: white;
+      border: 2px solid var(--sign-green);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .test-stars { color: var(--road-line); font-size: 14px; margin-bottom: 10px; }
+    .test-card blockquote {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .test-author { font-size: 12px; font-weight: 800; color: var(--sign-green-deeper); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ===== CTA ===== */
+    .cta {
+      background: var(--sign-green);
+      border-top: 4px solid var(--road-line);
+      border-bottom: 4px solid var(--road-line);
+      text-align: center;
+      padding: 64px 24px;
+      position: relative;
+    }
+    .cta h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .cta p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 24px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { background: var(--asphalt); }
+    .contact .section-title { color: white; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 36px;
+    }
+    .contact-method {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .cm-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--sign-green);
+      border: 2px solid white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .contact-method h4 {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+      margin-bottom: 2px;
+    }
+    .contact-method p { font-size: 13px; color: var(--text-muted); }
+    .contact-method a { color: var(--road-line); font-weight: 700; }
+    .hours-box {
+      background: var(--road-gray);
+      border: 2px solid var(--road-line);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-top: 8px;
+    }
+    .hours-box h4 {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--road-line);
+      margin-bottom: 8px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-light);
+      padding: 3px 0;
+    }
+    .contact-form {
+      background: var(--road-gray);
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .contact-form h3 {
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 4px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: 'Overpass', sans-serif;
+      background: var(--asphalt);
+      color: white;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--road-line);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--sign-green);
+      color: white;
+      border: 2px solid white;
+      border-radius: 6px;
+      font-family: 'Overpass', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .submit-btn:hover { background: var(--sign-green-dark); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--road-dark);
+      border-top: 4px solid var(--road-line);
+      color: rgba(255,255,255,0.5);
+      padding: 48px 24px 24px;
+    }
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 32px;
+    }
+    .footer-brand p { font-size: 12px; line-height: 1.6; margin-top: 10px; }
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--road-line);
+      margin-bottom: 12px;
+    }
+    .footer-col a { display: block; font-size: 12px; padding: 3px 0; transition: color 0.2s; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in { opacity: 0; transform: translateY(16px); transition: all 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+      .why-grid, .test-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: absolute;
+        top: 64px; left: 0; right: 0; background: var(--asphalt);
+        padding: 20px; border-bottom: 4px solid var(--road-line); gap: 12px;
+      }
+      .mile-markers { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo-area">
+        <div class="interstate-shield">
+          <svg class="shield-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 4 C20 4, 6 14, 4 28 L4 44 C4 58, 16 72, 40 78 C64 72, 76 58, 76 44 L76 28 C74 14, 60 4, 40 4Z" fill="#003da5" stroke="white" stroke-width="3"/>
+            <path d="M40 10 C24 10, 12 18, 10 30 L10 42 C10 54, 20 66, 40 72 C60 66, 70 54, 70 42 L70 30 C68 18, 56 10, 40 10Z" fill="#cc0000" stroke="none"/>
+            <path d="M40 16 C28 16, 18 22, 16 32 L16 42 C16 52, 24 62, 40 66 C56 62, 64 52, 64 42 L64 32 C62 22, 52 16, 40 16Z" fill="#003da5" stroke="none"/>
+            <text x="40" y="48" text-anchor="middle" font-family="Overpass, sans-serif" font-size="24" font-weight="900" fill="white">IOL</text>
+          </svg>
+        </div>
+        <div class="logo-text-area">
+          <span class="logo-name">Interstate Ortho Lab</span>
+          <span class="logo-sub">Est. 1989</span>
+        </div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#process">How It Works</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact" class="nav-cta">Get Quote</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-sign sign-panel">
+        <h1>Precision Orthodontic <span class="accent">Appliances</span></h1>
+        <p>One technician. 35+ years. Every appliance personally handcrafted by Douglas Saylor — no assembly lines, no hand-offs.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-hw btn-yellow">Get a Quote →</a>
+          <a href="#pricing" class="btn-hw btn-outline">See Prices</a>
+          <a href="/Interstate-Orthodontic-Lab-Brochure.pdf" class="btn-hw btn-outline" download>📄 Brochure</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="mile-markers">
+          <div class="mile-marker">
+            <h3>35+</h3>
+            <p>Years</p>
+          </div>
+          <div class="mile-marker">
+            <h3>48h</h3>
+            <p>Rush</p>
+          </div>
+          <div class="mile-marker">
+            <h3>100%</h3>
+            <p>Handmade</p>
+          </div>
+        </div>
+        <div class="sign-panel-blue sign-panel" style="padding: 20px; text-align: center;">
+          <div style="font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.7); margin-bottom: 4px;">Call Direct</div>
+          <div style="font-size: 28px; font-weight: 900; color: white; letter-spacing: 1px;">727-859-7171</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 4px;">Mon–Fri 8am–7pm · Sat 10am–2pm</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="exit-sign">Exit — About</div>
+        <h2 class="section-title">Meet Your Technician</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="/images/doug-saylor.jpg" alt="Douglas Saylor" width="400" height="400" loading="lazy">
+        </div>
+        <div class="about-text">
+          <h3>Douglas Saylor</h3>
+          <div class="about-role">Owner · Technician · Since 1989</div>
+          <p>I've been crafting orthodontic appliances since 1989. My main focus has always been the perfect fit. When you work with me, you're talking directly to the person making your appliance.</p>
+          <p>I started with traditional stone models and have carefully incorporated digital technology over the years. Whether your office sends stone models or digital scans via iTero (ID: 1105084), I've got you covered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section why">
+    <div class="container">
+      <div class="section-header">
+        <div class="exit-sign">Exit — Why Interstate</div>
+        <h2 class="section-title">Why Choose This Lab</h2>
+        <p class="section-sub">Big lab quality. Small lab care.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card sign-panel fade-in">
+          <div class="why-icon">🎯</div>
+          <h3>Accuracy First</h3>
+          <p>Every appliance built for the perfect fit. If it's not right, I remake it free.</p>
+        </div>
+        <div class="why-card sign-panel fade-in">
+          <div class="why-icon">👤</div>
+          <h3>One Tech, Every Case</h3>
+          <p>Same skilled hands from impression to delivery. No hand-offs, no assembly line.</p>
+        </div>
+        <div class="why-card sign-panel fade-in">
+          <div class="why-icon">⚡</div>
+          <h3>48-Hour Rush</h3>
+          <p>Real emergency turnarounds. Call 727-859-7171 and your case gets prioritized.</p>
+        </div>
+        <div class="why-card sign-panel fade-in">
+          <div class="why-icon">🤝</div>
+          <h3>Small Practice Focus</h3>
+          <p>You're not account #4,572. Every client gets personal, attentive service.</p>
+        </div>
+        <div class="why-card sign-panel fade-in">
+          <div class="why-icon">🛡️</div>
+          <h3>Service Guarantee</h3>
+          <p>One-of-a-kind service guarantee and fair pricing promise on every order.</p>
+        </div>
+        <div class="why-card sign-panel fade-in">
+          <div class="why-icon">📞</div>
+          <h3>Direct Line</h3>
+          <p>No phone trees. No hold music. Call or text the person making your appliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="exit-sign">Exit — Pricing</div>
+        <h2 class="section-title">Price List</h2>
+        <p class="section-sub">No hidden fees. Transparent pricing on every appliance.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card fade-in">
+          <div class="price-card-header">Removable</div>
+          <div class="price-row"><span>Hawley (cuspid–cuspid)</span><span>$55</span></div>
+          <div class="price-row"><span>Hawley (molar–molar)</span><span>$75</span></div>
+          <div class="price-row"><span>Spring Aligner</span><span>$125</span></div>
+          <div class="price-row"><span>T.M.J. Splint</span><span>$125</span></div>
+        </div>
+        <div class="price-card fade-in">
+          <div class="price-card-header blue">Fixed</div>
+          <div class="price-row"><span>Space Maintainer</span><span>$47</span></div>
+          <div class="price-row"><span>Lingual Arch</span><span>$55</span></div>
+          <div class="price-row"><span>Fixed Habit</span><span>$55</span></div>
+          <div class="price-row"><span>Nance</span><span>$55</span></div>
+          <div class="price-row"><span>E-Arch ("Arnold")</span><span>$75</span></div>
+          <div class="price-row"><span>Quad Helix</span><span>$80</span></div>
+          <div class="price-row"><span>R.P.E.</span><span>$90</span></div>
+        </div>
+        <div class="price-card fade-in">
+          <div class="price-card-header brown">Digital & Shipping</div>
+          <div class="price-row"><span>3D Print (per arch)</span><span>$21</span></div>
+          <div class="price-row"><span>USPS Flat-Rate</span><span>$14</span></div>
+          <div class="price-row free"><span>Shipping to IOL</span><span>FREE</span></div>
+        </div>
+      </div>
+      <div class="comp-strip sign-panel" style="margin-top: 24px;">
+        <h3>Components & Add-Ons</h3>
+        <div class="comp-tags">
+          <div class="comp-tag"><span>Color/Sparkle</span><span>$3</span></div>
+          <div class="comp-tag"><span>Ball Clasp/Rest</span><span>$6</span></div>
+          <div class="comp-tag"><span>Finger Spring</span><span>$6</span></div>
+          <div class="comp-tag"><span>Molar Band</span><span>$9</span></div>
+          <div class="comp-tag"><span>Bite Plate</span><span>$10</span></div>
+          <div class="comp-tag"><span>Molar Clasp</span><span>$10</span></div>
+          <div class="comp-tag"><span>Rake</span><span>$12</span></div>
+          <div class="comp-tag"><span>Acrylic Arch</span><span>$12</span></div>
+          <div class="comp-tag"><span>Expansion Screw</span><span>$15</span></div>
+          <div class="comp-tag"><span>Flat Labial Bow</span><span>$15</span></div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="/Interstate-Orthodontic-Lab-Price-List.pdf" class="btn-hw btn-green" download>📄 Download Price List</a>
+        <a href="/Interstate-Orthodontic-Lab-RX-Form.pdf" class="btn-hw btn-outline" style="border-color: var(--sign-green); color: var(--sign-green-deeper);" download>📋 Download RX Form</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="exit-sign">Exit — How It Works</div>
+        <h2 class="section-title">Getting Started</h2>
+      </div>
+      <div class="process-steps">
+        <div class="step sign-panel fade-in">
+          <div class="step-num">1</div>
+          <h3>Contact Doug</h3>
+          <p>Call 727-859-7171 or email. Confirm specs, materials, and timeline.</p>
+        </div>
+        <div class="step sign-panel fade-in">
+          <div class="step-num">2</div>
+          <h3>Send Impressions</h3>
+          <p>Mail stone models or digital scans via iTero (ID: 1105084).</p>
+        </div>
+        <div class="step sign-panel fade-in">
+          <div class="step-num">3</div>
+          <h3>Fabrication</h3>
+          <p>Personally crafted with meticulous attention to detail.</p>
+        </div>
+        <div class="step sign-panel fade-in">
+          <div class="step-num">4</div>
+          <h3>Ship & Deliver</h3>
+          <p>Quality check and fast ship. Standard 5–7 days. Rush: 48 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="exit-sign">Exit — Reviews</div>
+        <h2 class="section-title">What Doctors Say</h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card fade-in">
+          <div class="test-stars">★★★★★</div>
+          <blockquote>"Every appliance fits perfectly. I used to get remakes monthly from my old lab. With Doug — zero in over a year."</blockquote>
+          <div class="test-author">— Orthodontic Practice, FL</div>
+        </div>
+        <div class="test-card fade-in">
+          <div class="test-stars">★★★★★</div>
+          <blockquote>"I can call and talk to the actual person making my appliances. That's priceless in this industry."</blockquote>
+          <div class="test-author">— Pediatric Dental Office, FL</div>
+        </div>
+        <div class="test-card fade-in">
+          <div class="test-stars">★★★★★</div>
+          <blockquote>"Emergency on a Friday — Doug had the replacement at my door Monday morning. Incredible service."</blockquote>
+          <div class="test-author">— Orthodontic Clinic, GA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>⚡ Need an Appliance Fast?</h2>
+    <p>Emergency rush cases accepted. Call Doug directly for 48-hour priority turnaround.</p>
+    <a href="tel:+17278597171" class="btn-hw btn-yellow" style="font-size: 18px;">📞 Call 727-859-7171</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="exit-sign">Exit — Contact</div>
+        <h2 class="section-title">Get in Touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-method">
+            <div class="cm-icon">📞</div>
+            <div><h4>Phone</h4><p><a href="tel:+17278597171">727-859-7171</a></p></div>
+          </div>
+          <div class="contact-method">
+            <div class="cm-icon">✉️</div>
+            <div><h4>Email</h4><p><a href="mailto:doug@interstateorthodonticlab.com">doug@interstateorthodonticlab.com</a></p></div>
+          </div>
+          <div class="contact-method">
+            <div class="cm-icon">📦</div>
+            <div>
+              <h4>Ship Cases To</h4>
+              <p>4100 58th Street North, Unit #34<br>Kenneth City, FL 33709-6021</p>
+              <p style="margin-top:4px;"><a href="https://maps.app.goo.gl/ZdJXcUj7fCrgTy669" target="_blank" rel="noopener" style="color:var(--road-line);font-size:12px;">📍 View on Google Maps →</a></p>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="cm-icon">🖥️</div>
+            <div><h4>Digital Scans</h4><p>iTero ID: <strong style="color:white;">1105084</strong></p></div>
+          </div>
+          <div class="hours-box">
+            <h4>Hours</h4>
+            <div class="hours-row"><span>Mon – Fri</span><span>8:00 AM – 7:00 PM</span></div>
+            <div class="hours-row"><span>Saturday</span><span>10:00 AM – 2:00 PM</span></div>
+            <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Request a Quote</h3>
+          <form id="quoteForm">
+            <div class="form-row">
+              <div class="form-group"><label>Name</label><input type="text" placeholder="Dr. Jane Smith" required></div>
+              <div class="form-group"><label>Practice</label><input type="text" placeholder="Smith Orthodontics"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Email</label><input type="email" placeholder="doctor@practice.com" required></div>
+              <div class="form-group"><label>Phone</label><input type="tel" placeholder="(727) 555-0000"></div>
+            </div>
+            <div class="form-group">
+              <label>Appliance</label>
+              <select><option>Select...</option><option>Hawley Retainer</option><option>Spring Aligner</option><option>T.M.J. Splint</option><option>Space Maintainer</option><option>Lingual Arch</option><option>R.P.E. / Quad Helix</option><option>E-Arch ("Arnold")</option><option>Fixed Habit</option><option>Other</option></select>
+            </div>
+            <div class="form-group"><label>Message</label><textarea placeholder="Case details..."></textarea></div>
+            <button type="submit" class="submit-btn">Send Request →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-name" style="font-size:16px;display:block;margin-bottom:8px;">Interstate Orthodontic Lab</span>
+        <p>Precision orthodontic appliances handcrafted by Douglas Saylor since 1989. Kenneth City, Florida.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="#pricing">Hawley Retainers</a><a href="#pricing">Spring Aligners</a><a href="#pricing">TMJ Splints</a><a href="#pricing">Space Maintainers</a><a href="#pricing">R.P.E.</a>
+      </div>
+      <div class="footer-col">
+        <h4>Lab Info</h4>
+        <a href="#about">About Doug</a><a href="#process">How It Works</a><a href="#testimonials">Reviews</a><a href="#contact">Get a Quote</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+17278597171">727-859-7171</a><a href="mailto:doug@interstateorthodonticlab.com">Email Doug</a><a>Kenneth City, FL</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Interstate Orthodontic Lab</span>
+      <span>Handcrafted in Kenneth City, Florida 🇺🇸</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    document.getElementById('quoteForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('.submit-btn');
+      btn.textContent = '✓ SENT — Doug will be in touch';
+      btn.style.background = '#004d2d';
+      btn.disabled = true;
+      setTimeout(() => { btn.textContent = 'Send Request →'; btn.style.background = ''; btn.disabled = false; e.target.reset(); }, 4000);
+    });
+  </script>
+
+</body>
+</html>
