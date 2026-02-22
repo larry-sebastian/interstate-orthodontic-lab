@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interstate Orthodontic Lab — Brochure</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: letter;
+      margin: 0;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #2c3e3a;
+      background: #fff;
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    :root {
+      --teal: #3a7568;
+      --teal-dark: #2d5c52;
+      --teal-deep: #1e3f38;
+      --teal-light: #e8f4f0;
+      --cream: #f7faf9;
+      --dark: #1e2e2a;
+      --gray-700: #4a6660;
+      --gray-500: #7a9990;
+      --gray-100: #ecf2ef;
+      --white: #ffffff;
+      --gold: #c8a951;
+    }
+
+    /* ===== HEADER STRIP ===== */
+    .header-strip {
+      background: var(--teal-deep);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-strip h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .header-contact {
+      text-align: right;
+      font-size: 11px;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+    .header-contact strong {
+      font-size: 14px;
+      opacity: 1;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+      background: linear-gradient(135deg, var(--cream) 0%, #dceee8 100%);
+      padding: 32px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+    .hero-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .hero-section h2 em {
+      color: var(--teal);
+      font-style: normal;
+    }
+    .hero-section p {
+      font-size: 13px;
+      color: var(--gray-700);
+      line-height: 1.6;
+      max-width: 380px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 20px;
+      margin-top: 14px;
+    }
+    .hero-stat {
+      text-align: center;
+      background: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .hero-stat h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--teal);
+      line-height: 1;
+    }
+    .hero-stat p {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gray-500);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .hero-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--teal-light);
+      flex-shrink: 0;
+    }
+    .hero-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== MAIN CONTENT GRID ===== */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    /* ===== WHY INTERSTATE (left) ===== */
+    .why-col {
+      padding: 24px 28px 24px 40px;
+    }
+    .col-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--teal-light);
+    }
+    .why-item {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .why-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--teal-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .why-item h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 1px;
+    }
+    .why-item p {
+      font-size: 10.5px;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    /* ===== APPLIANCES (right) ===== */
+    .appliances-col {
+      padding: 24px 40px 24px 28px;
+      background: var(--cream);
+    }
+    .appliance-group {
+      margin-bottom: 14px;
+    }
+    .appliance-group h4 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--teal);
+      margin-bottom: 6px;
+    }
+    .appliance-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .appliance-tag {
+      background: white;
+      border: 1px solid var(--gray-100);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+    .components-box {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid var(--gray-100);
+    }
+    .components-box h4 {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gray-500);
+      margin-bottom: 6px;
+    }
+    .components-box p {
+      font-size: 10px;
+      color: var(--gray-700);
+      line-height: 1.5;
+    }
+
+    /* ===== COMPARISON STRIP ===== */
+    .compare-strip {
+      background: var(--teal-deep);
+      color: white;
+      padding: 20px 40px;
+    }
+    .compare-strip h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .compare-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 4px;
+      font-size: 10px;
+    }
+    .compare-row.header {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 9px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      margin-bottom: 8px;
+      color: rgba(255,255,255,0.6);
+    }
+    .compare-row.header span:last-child { color: #7edcbe; }
+    .compare-row span:first-child { font-weight: 600; color: rgba(255,255,255,0.85); }
+    .compare-row span:nth-child(2) { color: rgba(255,255,255,0.45); }
+    .compare-row span:last-child { color: #7edcbe; font-weight: 600; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-strip {
+      padding: 20px 40px;
+      background: white;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .test-card {
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 14px;
+      border: 1px solid var(--gray-100);
+    }
+    .test-stars {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .test-card blockquote {
+      font-size: 10px;
+      line-height: 1.55;
+      color: var(--gray-700);
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+    .test-author {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--gray-500);
+    }
+
+    /* ===== BOTTOM CTA ===== */
+    .bottom-cta {
+      background: var(--teal);
+      color: white;
+      padding: 20px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+    .bottom-cta h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .bottom-cta p {
+      font-size: 11px;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+    .bottom-cta-box {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-align: center;
+      min-width: 200px;
+    }
+    .bottom-cta-box .phone {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .bottom-cta-box .email {
+      font-size: 11px;
+      opacity: 0.8;
+    }
+    .bottom-cta-box .hours {
+      font-size: 9px;
+      opacity: 0.6;
+      margin-top: 4px;
+    }
+
+    /* ===== FOOTER ===== */
+    .brochure-footer {
+      background: var(--teal-deep);
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9px;
+      color: rgba(255,255,255,0.5);
+    }
+    .brochure-footer a {
+      color: rgba(255,255,255,0.7);
+    }
+    .badges {
+      display: flex;
+      gap: 14px;
+    }
+    .badge {
+      font-size: 9px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ===== PRINT ===== */
+    @media print {
+      body { width: 8.5in; min-height: 11in; }
+      .header-strip, .hero-section, .main-grid, .compare-strip,
+      .testimonials-strip, .bottom-cta, .brochure-footer {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header-strip">
+    <h1>Interstate Orthodontic Lab</h1>
+    <div class="header-contact">
+      <strong>727-859-7171</strong><br>
+      doug@interstateorthodonticlab.com<br>
+      interstateorthodonticlab.com
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero-section">
+    <div>
+      <h2>Precision Appliances, <em>Personal Service</em></h2>
+      <p>One experienced technician. 35+ years of craftsmanship. Every appliance handcrafted with absolute attention to detail — for practices that demand the perfect fit.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <h3>35+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="hero-stat">
+          <h3>48hr</h3>
+          <p>Rush Available</p>
+        </div>
+        <div class="hero-stat">
+          <h3>100%</h3>
+          <p>Handcrafted</p>
+        </div>
+        <div class="hero-stat">
+          <h3>1</h3>
+          <p>Dedicated Tech</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://static.wixstatic.com/media/7ef72f_1ca4683da8e5408aa69b107df4447ffb~mv2.jpeg/v1/crop/x_0,y_256,w_1536,h_1536/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2026-02-11-Doug_JPEG.jpeg" alt="Douglas Saylor">
+    </div>
+  </div>
+
+  <!-- TWO COLUMN: WHY US + APPLIANCES -->
+  <div class="main-grid">
+    <!-- LEFT: Why Interstate -->
+    <div class="why-col">
+      <div class="col-title">Why Choose Interstate</div>
+
+      <div class="why-item">
+        <div class="why-icon">🎯</div>
+        <div>
+          <h4>Accuracy-First Fabrication</h4>
+          <p>Every appliance built for the perfect fit. If it's not right, I remake it free — no questions asked.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">👤</div>
+        <div>
+          <h4>One Technician, Start to Finish</h4>
+          <p>No hand-offs. No assembly line. The same expert hands from impression to delivery, every case.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">⚡</div>
+        <div>
+          <h4>48-Hour Emergency Rush</h4>
+          <p>Real rush service for real emergencies. Call me directly and your case gets prioritized immediately.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">📞</div>
+        <div>
+          <h4>Direct Line — No Call Centers</h4>
+          <p>Call or text 727-859-7171 and talk to the person actually making your appliance. Questions answered in minutes.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🖥️</div>
+        <div>
+          <h4>Digital + Traditional</h4>
+          <p>I accept iTero scans (ID: 1105084), STL files, PVS impressions, and stone models. Whatever works for your office.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🤝</div>
+        <div>
+          <h4>Built for Small Practices</h4>
+          <p>You're not account #4,572. I work exclusively with small to mid-sized practices who value personal attention.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Appliances -->
+    <div class="appliances-col">
+      <div class="col-title">Appliances &amp; Products</div>
+
+      <div class="appliance-group">
+        <h4>Removable Appliances</h4>
+        <div class="appliance-list">
+          <span class="appliance-tag">Hawley Retainer</span>
+          <span class="appliance-tag">Spring Aligner</span>
+          <span class="appliance-tag">T.M.J. Splint</span>
+        </div>
+      </div>
+
+      <div class="appliance-group">
+        <h4>Fixed Appliances</h4>
+        <div class="appliance-list">
+          <span class="appliance-tag">Space Maintainer</span>
+          <span class="appliance-tag">Lingual Arch</span>
+          <span class="appliance-tag">Fixed Habit</span>
+          <span class="appliance-tag">E-Arch ("Arnold")</span>
+          <span class="appliance-tag">R.P.E. / Quad Helix</span>
+        </div>
+      </div>
+
+      <div class="appliance-group">
+        <h4>Specialty &amp; Custom</h4>
+        <div class="appliance-list">
+          <span class="appliance-tag">Sports Guards</span>
+          <span class="appliance-tag">Night Guards</span>
+          <span class="appliance-tag">Sleep Appliances</span>
+          <span class="appliance-tag">Custom Designs</span>
+        </div>
+      </div>
+
+      <div class="components-box">
+        <h4>Available Components &amp; Add-Ons</h4>
+        <p>Color Acrylic · Sparkle · Extra Ball Clasp · Finger Spring · Molar Band · Bite Plate · Rake · Acrylic Arch · Expansion Screw · Flat Labial Bow</p>
+      </div>
+
+      <div style="margin-top: 14px; padding: 12px 14px; background: var(--teal); border-radius: 8px; color: white;">
+        <h4 style="font-size: 11px; font-weight: 700; margin-bottom: 4px;">🎁 Try Your First Case Free</h4>
+        <p style="font-size: 10px; line-height: 1.5; opacity: 0.85;">New to Interstate? Your first standard appliance is on us. Zero risk, zero obligation. See the quality for yourself.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARISON -->
+  <div class="compare-strip">
+    <h3>How We Compare</h3>
+    <div class="compare-row header">
+      <span></span>
+      <span>Big Commercial Labs</span>
+      <span>Interstate Orthodontic Lab</span>
+    </div>
+    <div class="compare-row">
+      <span>Technician</span>
+      <span>Rotating / assembly line</span>
+      <span>✓ Same tech, every case</span>
+    </div>
+    <div class="compare-row">
+      <span>Communication</span>
+      <span>Call center / tickets</span>
+      <span>✓ Direct line to Doug</span>
+    </div>
+    <div class="compare-row">
+      <span>Rush turnaround</span>
+      <span>5–7 day "rush"</span>
+      <span>✓ 48 hours, truly prioritized</span>
+    </div>
+    <div class="compare-row">
+      <span>Impressions accepted</span>
+      <span>Often digital only</span>
+      <span>✓ Stone, PVS, and digital</span>
+    </div>
+    <div class="compare-row">
+      <span>Experience</span>
+      <span>Varies by technician</span>
+      <span>✓ 35+ years, same expert</span>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testimonials-strip">
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <blockquote>"The fit is perfect every single time. I used to get remakes monthly from my old lab. With Doug — zero in over a year."</blockquote>
+      <div class="test-author">— Orthodontic Practice, FL</div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <blockquote>"Called on a Friday afternoon with an emergency. Doug picked up and the replacement was at my door Monday morning."</blockquote>
+      <div class="test-author">— Pediatric Dental Office, FL</div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">★★★★★</div>
+      <blockquote>"The free first case sold me. That was two years ago. Haven't looked back since. Best lab I've worked with."</blockquote>
+      <div class="test-author">— Orthodontic Clinic, GA</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta">
+    <div>
+      <h3>Ready to Get Started?</h3>
+      <p>Send your first case free — see the precision, feel the fit, then decide. No pressure, no commitment. Just quality you can judge for yourself.</p>
+    </div>
+    <div class="bottom-cta-box">
+      <div class="phone">727-859-7171</div>
+      <div class="email">doug@interstateorthodonticlab.com</div>
+      <div class="hours">Mon–Fri 8am–7pm · Sat 10am–2pm</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="brochure-footer">
+    <span>Interstate Orthodontic Lab · 4100 58th Street North, Unit #34, Kenneth City, FL 33709 · interstateorthodonticlab.com</span>
+    <div class="badges">
+      <span class="badge">🇺🇸 Made in USA</span>
+      <span class="badge">🏥 FDA-Compliant</span>
+      <span class="badge">iTero: 1105084</span>
+    </div>
+  </div>
+
+</body>
+</html>
