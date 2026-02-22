@@ -51,23 +51,36 @@
     a { text-decoration: none; color: inherit; }
 
     :root {
-      --teal: #3a7568;
-      --teal-dark: #2d5c52;
-      --teal-deep: #1e3f38;
-      --teal-light: #e8f4f0;
-      --teal-muted: #5a9a8b;
-      --cream: #f7faf9;
-      --dark: #1e2e2a;
-      --gray-700: #4a6660;
-      --gray-500: #7a9990;
-      --gray-300: #bdd4cc;
-      --gray-100: #ecf2ef;
+      /* Interstate Highway Sign System */
+      --green: #006B3F;
+      --green-dark: #005A34;
+      --green-deeper: #004D2C;
+      --green-light: #E6F3ED;
+      --green-muted: #3D8B6A;
+      --blue: #003DA5;
+      --blue-dark: #002E7A;
+      --blue-light: #E8EDF8;
+      --red: #BF0A30;
+      --red-dark: #A00828;
+      --red-light: #FDEAEE;
+      /* Aliases */
+      --teal: var(--green);
+      --teal-dark: var(--green-dark);
+      --teal-deep: var(--green-deeper);
+      --teal-light: var(--green-light);
+      --teal-muted: var(--green-muted);
+      --cream: #F8F9FA;
+      --dark: #1A2E28;
+      --gray-700: #4A5C56;
+      --gray-500: #6E847C;
+      --gray-300: #B8C9C2;
+      --gray-100: #E8EEEB;
       --white: #ffffff;
       --gold: #c8a951;
-      --red-soft: #d94f4f;
-      --red-bg: #fef2f2;
-      --green-bg: #f0faf5;
-      --shadow: 0 4px 24px rgba(30,62,56,0.1);
+      --red-soft: var(--red);
+      --red-bg: var(--red-light);
+      --green-bg: var(--green-light);
+      --shadow: 0 4px 24px rgba(0,45,30,0.1);
       --radius: 12px;
     }
 
@@ -87,6 +100,7 @@
       font-weight: 500;
     }
     .sticky-bar strong { color: #7edcbe; }
+    .sticky-bar { background: var(--blue-dark); }
     .sticky-bar-btn {
       background: white;
       color: var(--teal-deep);
@@ -102,7 +116,7 @@
     /* ===== HERO ===== */
     .hero {
       padding: 96px 24px 72px;
-      background: linear-gradient(170deg, #f7faf9 0%, #e2efeb 40%, #d4e8e2 100%);
+      background: linear-gradient(170deg, #F8F9FA 0%, #E6F3ED 40%, #DCE8E4 100%);
       min-height: 90vh;
       display: flex;
       align-items: center;
@@ -120,7 +134,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(58,117,104,0.1);
+      background: rgba(0,107,63,0.1);
       color: var(--teal);
       padding: 6px 14px;
       border-radius: 4px;
@@ -142,7 +156,7 @@
       color: var(--teal);
       font-style: normal;
       text-decoration: underline;
-      text-decoration-color: rgba(58,117,104,0.3);
+      text-decoration-color: rgba(0,107,63,0.3);
       text-underline-offset: 4px;
     }
     .hero-sub {
@@ -250,7 +264,7 @@
     .form-group textarea:focus {
       outline: none;
       border-color: var(--teal);
-      box-shadow: 0 0 0 3px rgba(58,117,104,0.1);
+      box-shadow: 0 0 0 3px rgba(0,107,63,0.1);
       background: white;
     }
     .form-row {
@@ -261,7 +275,7 @@
     .cta-btn {
       width: 100%;
       padding: 15px;
-      background: var(--teal-dark);
+      background: var(--red);
       color: white;
       border: none;
       border-radius: 6px;
@@ -273,9 +287,9 @@
       letter-spacing: 0.3px;
     }
     .cta-btn:hover {
-      background: var(--teal-deep);
+      background: var(--red-dark);
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(30,62,56,0.3);
+      box-shadow: 0 4px 12px rgba(191,10,48,0.3);
     }
     .form-note {
       font-size: 12px;
@@ -1041,7 +1055,7 @@
         e.preventDefault();
         const btn = form.querySelector('.cta-btn');
         btn.textContent = '✓ Request Sent! Doug will call you within 24 hours.';
-        btn.style.background = '#2d5c52';
+        btn.style.background = '#005A34';
         btn.style.color = 'white';
         btn.disabled = true;
         // In production, send to your form handler here
