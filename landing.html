@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Try Your First Case Free | Interstate Orthodontic Lab</title>
+  <meta name="description" content="Tired of remakes, slow turnarounds, and labs that don't pick up the phone? Try Interstate Orthodontic Lab — your first standard appliance is free. 35+ years of precision craftsmanship.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #2c3e3a;
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    :root {
+      --teal: #3a7568;
+      --teal-dark: #2d5c52;
+      --teal-deep: #1e3f38;
+      --teal-light: #e8f4f0;
+      --teal-muted: #5a9a8b;
+      --cream: #f7faf9;
+      --dark: #1e2e2a;
+      --gray-700: #4a6660;
+      --gray-500: #7a9990;
+      --gray-300: #bdd4cc;
+      --gray-100: #ecf2ef;
+      --white: #ffffff;
+      --gold: #c8a951;
+      --red-soft: #d94f4f;
+      --red-bg: #fef2f2;
+      --green-bg: #f0faf5;
+      --shadow: 0 4px 24px rgba(30,62,56,0.1);
+      --radius: 12px;
+    }
+
+    /* ===== NO NAV — STICKY CTA BAR ===== */
+    .sticky-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: var(--teal-deep);
+      color: white;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .sticky-bar strong { color: #7edcbe; }
+    .sticky-bar-btn {
+      background: white;
+      color: var(--teal-deep);
+      padding: 8px 20px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      transition: all 0.2s;
+    }
+    .sticky-bar-btn:hover { background: var(--teal-light); }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 96px 24px 72px;
+      background: linear-gradient(170deg, #f7faf9 0%, #e2efeb 40%, #d4e8e2 100%);
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .hero-content {}
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(58,117,104,0.1);
+      color: var(--teal);
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(34px, 4.5vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      color: var(--teal);
+      font-style: normal;
+      text-decoration: underline;
+      text-decoration-color: rgba(58,117,104,0.3);
+      text-underline-offset: 4px;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--gray-700);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+    .hero-offer {
+      background: white;
+      border: 2px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .hero-offer-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+      color: white;
+    }
+    .hero-offer h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 2px;
+    }
+    .hero-offer p {
+      font-size: 14px;
+      color: var(--gray-500);
+    }
+    .hero-proof {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .hero-proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--gray-700);
+      font-weight: 500;
+    }
+    .hero-proof-item span {
+      font-size: 16px;
+    }
+
+    /* ===== HERO FORM ===== */
+    .hero-form-wrap {
+      background: white;
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .hero-form-wrap h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .hero-form-sub {
+      font-size: 13px;
+      color: var(--gray-500);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      color: var(--gray-700);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--gray-300);
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: border-color 0.2s;
+      background: var(--cream);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(58,117,104,0.1);
+      background: white;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .cta-btn {
+      width: 100%;
+      padding: 15px;
+      background: var(--teal-dark);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.3px;
+    }
+    .cta-btn:hover {
+      background: var(--teal-deep);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(30,62,56,0.3);
+    }
+    .form-note {
+      font-size: 12px;
+      color: var(--gray-500);
+      text-align: center;
+      margin-top: 12px;
+    }
+    .form-note span { font-size: 14px; }
+
+    /* ===== PAIN POINTS ===== */
+    .pain {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+    .pain-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .pain h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .pain > .pain-inner > p {
+      font-size: 17px;
+      color: var(--gray-500);
+      margin-bottom: 48px;
+    }
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+    }
+    .pain-card {
+      background: var(--red-bg);
+      border-radius: var(--radius);
+      padding: 28px;
+      border-left: 4px solid var(--red-soft);
+    }
+    .pain-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #b93b3b;
+      margin-bottom: 6px;
+    }
+    .pain-card p {
+      font-size: 14px;
+      color: #7a4545;
+      line-height: 1.6;
+    }
+
+    /* ===== SOLUTION ===== */
+    .solution {
+      padding: 80px 24px;
+      background: var(--cream);
+    }
+    .solution-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .solution h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .solution > .solution-inner > p {
+      font-size: 17px;
+      color: var(--gray-500);
+      margin-bottom: 48px;
+    }
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+    }
+    .solution-card {
+      background: var(--green-bg);
+      border-radius: var(--radius);
+      padding: 28px;
+      border-left: 4px solid var(--teal);
+    }
+    .solution-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 6px;
+    }
+    .solution-card p {
+      font-size: 14px;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    /* ===== COMPARISON TABLE ===== */
+    .compare {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+    .compare-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .compare h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 700;
+      color: var(--dark);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .compare-table thead th {
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--gray-100);
+    }
+    .compare-table thead th:first-child { color: var(--gray-500); }
+    .compare-table thead th:nth-child(2) {
+      color: var(--gray-500);
+    }
+    .compare-table thead th:nth-child(3) {
+      color: var(--teal);
+      background: var(--teal-light);
+      border-radius: 8px 8px 0 0;
+    }
+    .compare-table tbody td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--gray-100);
+      vertical-align: top;
+    }
+    .compare-table tbody td:first-child {
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .compare-table tbody td:nth-child(2) {
+      color: var(--gray-500);
+    }
+    .compare-table tbody td:nth-child(3) {
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-weight: 600;
+    }
+    .compare-table tbody tr:last-child td:nth-child(3) {
+      border-radius: 0 0 8px 8px;
+    }
+    .x-mark { color: var(--red-soft); font-weight: 700; }
+    .check { color: var(--teal); font-weight: 700; }
+
+    /* ===== SOCIAL PROOF ===== */
+    .proof {
+      padding: 80px 24px;
+      background: var(--teal-deep);
+      color: white;
+    }
+    .proof-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .proof h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .proof > .proof-inner > p {
+      text-align: center;
+      font-size: 17px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 48px;
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .proof-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .proof-stars {
+      color: var(--gold);
+      font-size: 14px;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+    }
+    .proof-card blockquote {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.85);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+    .proof-author {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ===== MEET DOUG ===== */
+    .meet {
+      padding: 80px 24px;
+      background: var(--cream);
+    }
+    .meet-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .meet-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--teal-light);
+      box-shadow: var(--shadow);
+    }
+    .meet-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .meet-text .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+    .meet-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .meet-text p {
+      font-size: 16px;
+      color: var(--gray-700);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .meet-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 20px;
+    }
+    .meet-stat h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--teal);
+      line-height: 1;
+    }
+    .meet-stat p {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gray-500);
+      font-weight: 600;
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+    .faq-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .faq h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--dark);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-100);
+      padding: 20px 0;
+    }
+    .faq-q {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-q::after {
+      content: '+';
+      font-size: 22px;
+      color: var(--teal);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .faq-item.open .faq-q::after {
+      content: '−';
+    }
+    .faq-a {
+      font-size: 15px;
+      color: var(--gray-700);
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding-top: 0;
+    }
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding-top: 12px;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      padding: 80px 24px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: white;
+      text-align: center;
+    }
+    .final-cta-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .final-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .final-cta p {
+      font-size: 17px;
+      opacity: 0.85;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .final-form {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    .final-form .form-group input,
+    .final-form .form-group select {
+      background: rgba(255,255,255,0.95);
+      border-color: rgba(255,255,255,0.3);
+    }
+    .final-form .form-group label {
+      color: rgba(255,255,255,0.8);
+    }
+    .final-form .cta-btn {
+      background: white;
+      color: var(--teal-deep);
+    }
+    .final-form .cta-btn:hover {
+      background: var(--teal-light);
+    }
+    .final-guarantee {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .final-guarantee span {
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    /* ===== FOOTER ===== */
+    .lp-footer {
+      background: var(--teal-deep);
+      color: rgba(255,255,255,0.5);
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+    }
+    .lp-footer a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .pain-grid, .solution-grid, .proof-grid { grid-template-columns: 1fr; }
+      .compare-table { font-size: 13px; }
+      .compare-table thead th, .compare-table tbody td { padding: 10px 12px; }
+      .meet-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+      .meet-stats { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      .sticky-bar { font-size: 12px; gap: 10px; flex-wrap: wrap; justify-content: center; padding: 8px 16px; }
+      .sticky-bar-btn { padding: 6px 14px; font-size: 12px; }
+      .hero { padding: 80px 16px 56px; }
+      .hero-offer { flex-direction: column; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .compare-table { font-size: 12px; }
+      .final-guarantee { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== STICKY TOP BAR ===== -->
+  <div class="sticky-bar">
+    <span>🎁 <strong>Limited Offer:</strong> Your first standard appliance is FREE — try before you commit</span>
+    <a href="#hero-form" class="sticky-bar-btn">Claim Free Case →</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Handcrafted in Florida Since 1989</div>
+        <h1>Tired of Remakes and Labs That Never Pick Up the Phone?</h1>
+        <p class="hero-sub">Switch to the orthodontic lab where one experienced technician personally crafts every appliance — and actually answers when you call.</p>
+        <div class="hero-offer">
+          <div class="hero-offer-icon">🎁</div>
+          <div>
+            <h3>Your First Standard Appliance Is Free</h3>
+            <p>Zero risk. See the quality yourself before committing. No strings attached.</p>
+          </div>
+        </div>
+        <div class="hero-proof">
+          <div class="hero-proof-item"><span>✅</span> 35+ Years Experience</div>
+          <div class="hero-proof-item"><span>✅</span> Made in USA</div>
+          <div class="hero-proof-item"><span>✅</span> 48hr Rush Available</div>
+        </div>
+      </div>
+
+      <!-- ===== HERO FORM ===== -->
+      <div class="hero-form-wrap" id="hero-form">
+        <h2>Get Your Free First Case</h2>
+        <p class="hero-form-sub">Takes 30 seconds. Doug will personally follow up within 24 hours.</p>
+        <form id="leadForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="Dr. Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="practice">Practice Name</label>
+              <input type="text" id="practice" placeholder="Smith Orthodontics" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="doctor@practice.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" placeholder="(727) 555-0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="appliance">What Appliance Do You Need?</label>
+            <select id="appliance">
+              <option value="">Select one...</option>
+              <option>Hawley Retainer</option>
+              <option>Spring Aligner</option>
+              <option>T.M.J. Splint</option>
+              <option>Space Maintainer</option>
+              <option>Lingual Arch</option>
+              <option>R.P.E. / Quad Helix</option>
+              <option>E-Arch ("Arnold")</option>
+              <option>Fixed Habit Appliance</option>
+              <option>Other / Not Sure Yet</option>
+            </select>
+          </div>
+          <button type="submit" class="cta-btn">🎁 Claim My Free First Case →</button>
+          <p class="form-note"><span>🔒</span> No spam. No obligation. Just quality you can judge for yourself.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAIN POINTS ===== -->
+  <section class="pain fade-up">
+    <div class="pain-inner">
+      <h2>Sound Familiar?</h2>
+      <p>Orthodontists tell us these are the biggest frustrations with their current lab:</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <h3>😤 Constant Remakes</h3>
+          <p>Appliances that don't fit right. Sloppy fabrication. Cases that bounce back and forth, wasting your time and your patient's patience.</p>
+        </div>
+        <div class="pain-card">
+          <h3>📞 Can't Reach Anyone</h3>
+          <p>Call the lab and get a call center. Leave a message. Wait days. Never talk to the actual person making your appliance.</p>
+        </div>
+        <div class="pain-card">
+          <h3>🐌 Slow Turnarounds</h3>
+          <p>"Rush" service that still takes a week. Patient emergencies that your lab treats like routine orders. No flexibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION ===== -->
+  <section class="solution fade-up">
+    <div class="solution-inner">
+      <h2>There's a Better Way</h2>
+      <p>At Interstate Orthodontic Lab, everything is different by design:</p>
+      <div class="solution-grid">
+        <div class="solution-card">
+          <h3>🎯 Fits Right the First Time</h3>
+          <p>35+ years of precision craftsmanship. One technician fabricates your entire case with meticulous attention to detail. If it's not perfect, it gets remade — free.</p>
+        </div>
+        <div class="solution-card">
+          <h3>📱 Call Doug Directly</h3>
+          <p>727-859-7171. That's it. Call or text the person who's actually building your appliance. Questions answered in minutes, not days.</p>
+        </div>
+        <div class="solution-card">
+          <h3>⚡ Real Rush Service</h3>
+          <p>48-hour emergency turnaround when your patient needs it. No "rush fees" that still take a week. Your urgency is taken seriously.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPARISON ===== -->
+  <section class="compare fade-up">
+    <div class="compare-inner">
+      <h2>Interstate vs. Large Commercial Labs</h2>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Big Labs</th>
+            <th>Interstate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Who makes your appliance?</td>
+            <td>Rotating techs, assembly line</td>
+            <td><span class="check">✓</span> Same technician, every case</td>
+          </tr>
+          <tr>
+            <td>Can you call the technician?</td>
+            <td><span class="x-mark">✗</span> Call center / ticket system</td>
+            <td><span class="check">✓</span> Direct line to Doug</td>
+          </tr>
+          <tr>
+            <td>Rush turnaround</td>
+            <td>5–7 days "rush"</td>
+            <td><span class="check">✓</span> 48 hours, truly prioritized</td>
+          </tr>
+          <tr>
+            <td>Remake rate</td>
+            <td>Industry average 5–10%</td>
+            <td><span class="check">✓</span> Near-zero, precision-first</td>
+          </tr>
+          <tr>
+            <td>Experience</td>
+            <td>Varies by technician</td>
+            <td><span class="check">✓</span> 35+ years, same expert</td>
+          </tr>
+          <tr>
+            <td>Impression types accepted</td>
+            <td>Often digital only</td>
+            <td><span class="check">✓</span> Stone models, PVS, AND digital (iTero)</td>
+          </tr>
+          <tr>
+            <td>Do you feel valued?</td>
+            <td>You're account #4,572</td>
+            <td><span class="check">✓</span> You're a partner, not a number</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL PROOF ===== -->
+  <section class="proof fade-up">
+    <div class="proof-inner">
+      <h2>What Orthodontists Are Saying</h2>
+      <p>Don't take our word for it — here's what practices experience after switching.</p>
+      <div class="proof-grid">
+        <div class="proof-card">
+          <div class="proof-stars">★★★★★</div>
+          <blockquote>"The fit is perfect every single time. I used to get 1–2 remakes a month from my old lab. With Doug, I've had zero in over a year. Zero."</blockquote>
+          <div class="proof-author">— Orthodontic Practice, FL</div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-stars">★★★★★</div>
+          <blockquote>"I called on a Friday afternoon with a patient emergency. Doug picked up, and the replacement was at my door Monday morning. Try getting that from a big lab."</blockquote>
+          <div class="proof-author">— Pediatric Dental Office, FL</div>
+        </div>
+        <div class="proof-card">
+          <div class="proof-stars">★★★★★</div>
+          <blockquote>"The thing that sold me was the free first case. I figured, what's the risk? That was two years ago. Haven't looked back since."</blockquote>
+          <div class="proof-author">— Orthodontic Clinic, GA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEET DOUG ===== -->
+  <section class="meet fade-up">
+    <div class="meet-inner">
+      <div class="meet-photo">
+        <img src="https://static.wixstatic.com/media/7ef72f_1ca4683da8e5408aa69b107df4447ffb~mv2.jpeg/v1/crop/x_0,y_256,w_1536,h_1536/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/2026-02-11-Doug_JPEG.jpeg" alt="Douglas Saylor" loading="lazy">
+      </div>
+      <div class="meet-text">
+        <div class="eyebrow">The Person Behind Your Appliances</div>
+        <h2>Douglas Saylor</h2>
+        <p>I've been crafting orthodontic appliances since 1989 — over 35 years of hands-on experience. My main focus has always been the perfect fit. When you work with me, you're not dealing with a sales rep or a ticket system. You're talking directly to the person making your appliance.</p>
+        <p>I started with traditional stone models and have carefully incorporated digital technology over the years. Whether your office sends stone models or digital scans via iTero, I've got you covered.</p>
+        <div class="meet-stats">
+          <div class="meet-stat">
+            <h4>1989</h4>
+            <p>Since</p>
+          </div>
+          <div class="meet-stat">
+            <h4>35+</h4>
+            <p>Years</p>
+          </div>
+          <div class="meet-stat">
+            <h4>1</h4>
+            <p>Dedicated Tech</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq fade-up">
+    <div class="faq-inner">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item open">
+        <div class="faq-q">Is the first case really free?</div>
+        <div class="faq-a">Yes. Your first standard appliance (Hawley retainer, space maintainer, etc.) is completely free. No catch, no obligation to send more cases. I want you to judge the quality yourself before making any commitment.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What appliances do you make?</div>
+        <div class="faq-a">Hawley retainers, spring aligners, TMJ splints, space maintainers, lingual arches, fixed habit appliances, E-arches, RPE/quad helix, and custom/specialty work. If it's an orthodontic appliance, I can build it.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Do you accept digital scans?</div>
+        <div class="faq-a">Yes — I accept iTero scans (ID: 1105084) as well as STL files from other scanners. I also work with traditional stone models and PVS impressions. Whatever your office uses, I can work with it.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How fast is rush turnaround?</div>
+        <div class="faq-a">For true emergencies, I can fabricate and ship within 48 hours. Call me directly at 727-859-7171 and I'll prioritize your case immediately. Standard turnaround is 5–7 business days.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Where are you located? Do you ship nationwide?</div>
+        <div class="faq-a">I'm based in Kenneth City, Florida (Tampa Bay area). I ship to orthodontic practices throughout the United States. Free shipping labels available on request.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What if the appliance doesn't fit?</div>
+        <div class="faq-a">I remake it at no charge — period. Accuracy is my number one priority. But honestly, it almost never happens. I'd rather take extra time getting it right the first time than ship something I'm not confident in.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How is working with a one-person lab better than a big lab?</div>
+        <div class="faq-a">Consistency. The same skilled hands that start your case are the ones that finish it. No shift changes, no hand-offs between departments, no varying quality. Plus, you get my direct phone number — try calling the technician at a 200-person lab.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta" id="final-cta">
+    <div class="final-cta-inner">
+      <h2>Ready to Try the Difference?</h2>
+      <p>Send your first case free. See the precision. Feel the fit. Then decide. No pressure, no commitment, no risk.</p>
+      <div class="final-form">
+        <form id="leadForm2">
+          <div class="form-group">
+            <label for="name2">Your Name</label>
+            <input type="text" id="name2" placeholder="Dr. Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="phone2">Phone</label>
+            <input type="tel" id="phone2" placeholder="(727) 555-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="email2">Email</label>
+            <input type="email" id="email2" placeholder="doctor@practice.com" required>
+          </div>
+          <button type="submit" class="cta-btn">🎁 Claim My Free First Case →</button>
+        </form>
+      </div>
+      <div class="final-guarantee">
+        <span>🎯 Fit-Right Guarantee</span>
+        <span>🔒 No Obligation</span>
+        <span>📞 Direct Line to Doug</span>
+        <span>🇺🇸 Made in USA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="lp-footer">
+    <p>© 2026 Interstate Orthodontic Lab · 4100 58th Street North, Unit #34, Kenneth City, FL 33709 · <a href="tel:+17278597171">727-859-7171</a> · <a href="mailto:doug@interstateorthodonticlab.com">doug@interstateorthodonticlab.com</a></p>
+    <p style="margin-top: 6px;"><a href="https://interstate-ortho-site.vercel.app">← Back to main website</a></p>
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const wasOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // Toggle clicked
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+    // Form submissions
+    function handleSubmit(form, btnText) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('.cta-btn');
+        btn.textContent = '✓ Request Sent! Doug will call you within 24 hours.';
+        btn.style.background = '#2d5c52';
+        btn.style.color = 'white';
+        btn.disabled = true;
+        // In production, send to your form handler here
+        setTimeout(() => {
+          btn.textContent = btnText;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+          form.reset();
+        }, 5000);
+      });
+    }
+    handleSubmit(document.getElementById('leadForm'), '🎁 Claim My Free First Case →');
+    handleSubmit(document.getElementById('leadForm2'), '🎁 Claim My Free First Case →');
+
+    // Smooth scroll for sticky bar
+    document.querySelector('.sticky-bar-btn').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('hero-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  </script>
+
+</body>
+</html>
