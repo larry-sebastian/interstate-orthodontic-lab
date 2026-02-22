@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://interstate-ortho-site.vercel.app/sitemap.xml
