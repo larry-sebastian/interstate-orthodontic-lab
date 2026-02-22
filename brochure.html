@@ -229,6 +229,24 @@
       color: var(--gray-700);
       line-height: 1.5;
     }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 11px;
+    }
+    .price-row:last-child { border-bottom: none; }
+    .price-row span:first-child { color: var(--gray-700); }
+    .price-row span:last-child {
+      font-weight: 700;
+      color: var(--teal-dark);
+      font-size: 11.5px;
+    }
+    .price-row small { color: var(--gray-500); font-size: 9.5px; }
+    .price-row.sm { font-size: 9.5px; padding: 2.5px 0; }
+    .price-row.sm span:last-child { font-size: 10px; }
 
     /* ===== COMPARISON STRIP ===== */
     .compare-strip {
@@ -472,48 +490,54 @@
       </div>
     </div>
 
-    <!-- RIGHT: Appliances -->
+    <!-- RIGHT: Pricing -->
     <div class="appliances-col">
-      <div class="col-title">Appliances &amp; Products</div>
+      <div class="col-title">Price List</div>
 
+      <!-- Removable -->
       <div class="appliance-group">
         <h4>Removable Appliances</h4>
-        <div class="appliance-list">
-          <span class="appliance-tag">Hawley Retainer</span>
-          <span class="appliance-tag">Spring Aligner</span>
-          <span class="appliance-tag">T.M.J. Splint</span>
-        </div>
+        <div class="price-row"><span>Hawley <small>(cuspid to cuspid)</small></span><span>$55</span></div>
+        <div class="price-row"><span>Hawley <small>(molar to molar)</small></span><span>$75</span></div>
+        <div class="price-row"><span>Spring Aligner</span><span>$125</span></div>
+        <div class="price-row"><span>T.M.J. Splint</span><span>$125</span></div>
       </div>
 
+      <!-- Fixed -->
       <div class="appliance-group">
         <h4>Fixed Appliances</h4>
-        <div class="appliance-list">
-          <span class="appliance-tag">Space Maintainer</span>
-          <span class="appliance-tag">Lingual Arch</span>
-          <span class="appliance-tag">Fixed Habit</span>
-          <span class="appliance-tag">E-Arch ("Arnold")</span>
-          <span class="appliance-tag">R.P.E. / Quad Helix</span>
+        <div class="price-row"><span>Space Maintainer</span><span>$47</span></div>
+        <div class="price-row"><span>Lingual Arch</span><span>$55</span></div>
+        <div class="price-row"><span>Fixed Habit</span><span>$55</span></div>
+        <div class="price-row"><span>Nance</span><span>$55</span></div>
+        <div class="price-row"><span>E-Arch ("Arnold")</span><span>$75</span></div>
+        <div class="price-row"><span>Quad Helix</span><span>$80</span></div>
+        <div class="price-row"><span>R.P.E.</span><span>$90</span></div>
+      </div>
+
+      <!-- Components -->
+      <div class="components-box" style="margin-top: 10px;">
+        <h4>Components &amp; Add-Ons</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px;">
+          <div class="price-row sm"><span>Color / Sparkle</span><span>$3</span></div>
+          <div class="price-row sm"><span>Extra Molar Clasp</span><span>$10</span></div>
+          <div class="price-row sm"><span>Ball Clasp / Rest</span><span>$6</span></div>
+          <div class="price-row sm"><span>Rake</span><span>$12</span></div>
+          <div class="price-row sm"><span>Finger Spring</span><span>$6</span></div>
+          <div class="price-row sm"><span>Acrylic Arch</span><span>$12</span></div>
+          <div class="price-row sm"><span>Molar Band</span><span>$9</span></div>
+          <div class="price-row sm"><span>Expansion Screw</span><span>$15</span></div>
+          <div class="price-row sm"><span>Bite Plate</span><span>$10</span></div>
+          <div class="price-row sm"><span>Flat Labial Bow</span><span>$15</span></div>
         </div>
       </div>
 
-      <div class="appliance-group">
-        <h4>Specialty &amp; Custom</h4>
-        <div class="appliance-list">
-          <span class="appliance-tag">Sports Guards</span>
-          <span class="appliance-tag">Night Guards</span>
-          <span class="appliance-tag">Sleep Appliances</span>
-          <span class="appliance-tag">Custom Designs</span>
-        </div>
-      </div>
-
-      <div class="components-box">
-        <h4>Available Components &amp; Add-Ons</h4>
-        <p>Color Acrylic · Sparkle · Extra Ball Clasp · Finger Spring · Molar Band · Bite Plate · Rake · Acrylic Arch · Expansion Screw · Flat Labial Bow</p>
-      </div>
-
-      <div style="margin-top: 14px; padding: 12px 14px; background: var(--teal); border-radius: 8px; color: white;">
-        <h4 style="font-size: 11px; font-weight: 700; margin-bottom: 4px;">🎁 Try Your First Case Free</h4>
-        <p style="font-size: 10px; line-height: 1.5; opacity: 0.85;">New to Interstate? Your first standard appliance is on us. Zero risk, zero obligation. See the quality for yourself.</p>
+      <!-- Shipping & Digital -->
+      <div style="margin-top: 10px; padding: 10px 14px; background: white; border-radius: 8px; border: 1px solid var(--gray-100);">
+        <h4 style="font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gray-500); margin-bottom: 5px;">Digital &amp; Shipping</h4>
+        <div class="price-row sm"><span>3D Printed Model (per arch)</span><span>$21</span></div>
+        <div class="price-row sm"><span>USPS Flat-Rate Shipping</span><span>$14</span></div>
+        <div class="price-row sm"><span>Shipping to IOL</span><span style="color: var(--teal);">FREE</span></div>
       </div>
     </div>
   </div>
