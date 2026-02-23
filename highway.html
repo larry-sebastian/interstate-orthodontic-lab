@@ -7,6 +7,8 @@
   <meta name="description" content="Custom orthodontic appliances handcrafted by Douglas Saylor since 1989. Precision fabrication, 48-hour rush, serving practices nationwide from Kenneth City, FL. Call 727-859-7171.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://interstate-ortho-site.vercel.app/highway.html">
+  <link rel="icon" type="image/png" href="/images/iol-logo.png">
+  <link rel="apple-touch-icon" href="/images/iol-logo.png">
   <meta property="og:title" content="Interstate Orthodontic Lab | Highway Edition">
   <meta property="og:description" content="Custom orthodontic appliances since 1989. 48-hour rush. Call 727-859-7171.">
   <meta property="og:image" content="https://interstate-ortho-site.vercel.app/images/og-image.jpg">
@@ -91,8 +93,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
-    .shield-svg { width: 48px; height: 48px; }
+    .interstate-shield img { width: 48px; height: 48px; object-fit: contain; }
     .logo-text-area {
       display: flex;
       flex-direction: column;
@@ -735,12 +738,7 @@
     <nav>
       <div class="logo-area">
         <div class="interstate-shield">
-          <svg class="shield-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-            <path d="M40 4 C20 4, 6 14, 4 28 L4 44 C4 58, 16 72, 40 78 C64 72, 76 58, 76 44 L76 28 C74 14, 60 4, 40 4Z" fill="#003da5" stroke="white" stroke-width="3"/>
-            <path d="M40 10 C24 10, 12 18, 10 30 L10 42 C10 54, 20 66, 40 72 C60 66, 70 54, 70 42 L70 30 C68 18, 56 10, 40 10Z" fill="#BF0A30" stroke="none"/>
-            <path d="M40 16 C28 16, 18 22, 16 32 L16 42 C16 52, 24 62, 40 66 C56 62, 64 52, 64 42 L64 32 C62 22, 52 16, 40 16Z" fill="#003da5" stroke="none"/>
-            <text x="40" y="48" text-anchor="middle" font-family="Overpass, sans-serif" font-size="24" font-weight="900" fill="white">IOL</text>
-          </svg>
+          <img src="/images/iol-logo.png" alt="Interstate Orthodontic Lab logo" width="48" height="48">
         </div>
         <div class="logo-text-area">
           <span class="logo-name">Interstate Orthodontic Lab</span>
